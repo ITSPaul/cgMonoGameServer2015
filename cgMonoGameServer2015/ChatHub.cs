@@ -8,7 +8,7 @@ namespace cgMonoGameServer2015
 {
     public class ChatHub : Hub
     {
-        public void Send(string name, string message)
+        public void SendMess(string name, string message)
         {
             Clients.All.heyThere(name, message);
         }
