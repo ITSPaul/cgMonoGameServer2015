@@ -184,6 +184,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\DataClasses\DataClasses.cs">
+      <Link>DataClasses.cs</Link>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -324,12 +327,6 @@
     <EmbeddedResource Include="Migrations\201511020952551_Initial Game Model.resx">
       <DependentUpon>201511020952551_Initial Game Model.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\2016\Semester 1\CG\Week 9\MultiPlayerSignalREx\DataClasses\DataClasses.csproj">
-      <Project>{7f669265-a6d5-474b-a54a-26e55155d8c6}</Project>
-      <Name>DataClasses</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
