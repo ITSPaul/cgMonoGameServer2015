@@ -16,10 +16,14 @@ namespace cgMonoGameServer2015.Migrations
             ContextKey = "cgMonoGameServer2015.Models.ApplicationDbContext";
         }
         int _usercounter = 0;
-        public int Counter { get { return _usercounter++; } }
+        public int Counter { get { return ++_usercounter; } }
 
         int _emailCounter = 0;
-        public int EmailCounter { get { return _emailCounter++; } }
+        public int EmailCounter { get { return ++_emailCounter; } }
+
+        int _passCounter = 0;
+        public int PassCounter { get { return ++_passCounter; } }
+
 
         protected override void Seed(cgMonoGameServer2015.Models.ApplicationDbContext context)
         {
@@ -49,11 +53,22 @@ namespace cgMonoGameServer2015.Migrations
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "powell.paul@itsligo.ie" ,
+                    Email = "powell.paul@itsligo.ie",
+                    EmailConfirmed = true,
+                    GamerTag = "ppowell",
+                    PasswordHash = hasher.HashPassword("itsPaul$1" )
+
+                },
+
+                new ApplicationUser
+                {
+                    XP = r.Next(400),
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(), 
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString())
                     
                 },
                 new ApplicationUser
@@ -63,7 +78,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 },
                 new ApplicationUser
                 {
@@ -72,7 +87,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 },
                 new ApplicationUser
                 {
@@ -81,7 +96,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 },
                 new ApplicationUser {
                 XP = r.Next(400),
@@ -89,7 +104,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 },
                 new ApplicationUser
                 {
@@ -98,7 +113,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 },
                 new ApplicationUser
                 {
@@ -107,7 +122,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 },
                 new ApplicationUser
                 {
@@ -116,7 +131,7 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
-                    PasswordHash = hasher.HashPassword("GamerTag" + _usercounter.ToString()),
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
                 }
                 );
             context.SaveChanges();

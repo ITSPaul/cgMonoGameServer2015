@@ -28,7 +28,8 @@ namespace cgMonoGameServer2015
         {
             HubState.playerConnections.Add(Context.ConnectionId);
             Clients.All.opponentJoined(Joined, CharacterName,x,y);
-            int playerCount = HubState.playerConnections.ToList().FindIndex(p => p.Equals(Context.ConnectionId));
+            int playerCount = HubState.playerConnections.ToList()
+                            .FindIndex(p => p.Equals(Context.ConnectionId));
             Clients.Caller.playerNumber(playerCount);
             Clients.Others.opponentNumber(playerCount);
         }
@@ -41,6 +42,21 @@ namespace cgMonoGameServer2015
             Clients.Others.opponentJoined(playerID, CharacterName, x, y);
             Clients.Others.opponentNumber(playerCount);
             Clients.All.setup();
+        }
+        // update other clients with barrier hits
+        public void barrierHit(int x, int y)
+        {
+            Clients.Others.opponentBarrierHit(x, y, Context.ConnectionId);
+        }
+        // update other clients with items collected
+        public void collected(int x, int y)
+        {
+            Clients.Others.opponentCollected(x, y, Context.ConnectionId);
+        }
+
+        public void winner()
+        {
+            Clients.Others.loosers(Context.ConnectionId);
         }
 
         //
@@ -70,6 +86,11 @@ namespace cgMonoGameServer2015
             Clients.Others.createOpponentBarrier(x, y);
         }
 
+        public void setUpOpponentCollectable(int x, int y)
+        {
+            Clients.Others.createOpponentCollectable(x, y);
+        }
+
         public int getPlayerCount()
         {
             return HubState.playerConnections.Count();
@@ -81,10 +102,7 @@ namespace cgMonoGameServer2015
         }
 
 
-        public void setUpOpponentCollectable(int x, int y)
-        {
-            Clients.Others.createOpponentCollectable(x, y);
-        }
+        
 
 
     }
