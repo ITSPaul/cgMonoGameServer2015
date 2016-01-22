@@ -57,8 +57,8 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "powell.paul@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "ppowell",
-                    PasswordHash = hasher.HashPassword("itsPaul$1" )
-
+                    PasswordHash = hasher.HashPassword("itsPaul$1" ),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
 
                 new ApplicationUser
@@ -68,70 +68,77 @@ namespace cgMonoGameServer2015.Migrations
                     Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(), 
-                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString())
-                    
+                    PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser {
                 XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 },
                 new ApplicationUser
                 {
                     XP = r.Next(400),
-                    UserName = "User " + Counter.ToString() + "@itsligo.ie",
-                    Email = "User " + EmailCounter.ToString() + "@itsligo.ie",
+                    UserName = "User" + Counter.ToString() + "@itsligo.ie",
+                    Email = "User" + EmailCounter.ToString() + "@itsligo.ie",
                     EmailConfirmed = true,
                     GamerTag = "GamerTag" + _usercounter.ToString(),
                     PasswordHash = hasher.HashPassword("Password$" + _usercounter.ToString()),
+                    SecurityStamp = Guid.NewGuid().ToString()
                 }
                 );
             context.SaveChanges();
