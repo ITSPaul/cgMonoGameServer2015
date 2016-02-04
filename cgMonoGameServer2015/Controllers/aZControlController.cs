@@ -20,7 +20,7 @@ namespace cgMonoGameServer2015.Controllers
             int hour = d.Hour;
             int minutes = d.Minute;
             int second = d.Second;
-            string returnDate = "Date:" + day.ToString() + "-" + month.ToString() + "-" + year.ToString() + "Time:" + hour.ToString()
+            string returnDate = "Date:" + day.ToString() + "-" + month.ToString() + "-" + year.ToString() + " Time:" + hour.ToString()
                 + "-" + minutes.ToString() + "-" + second.ToString();
             return returnDate;
         }
