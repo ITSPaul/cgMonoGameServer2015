@@ -13,7 +13,8 @@ namespace cgMonoGameServer2015.Controllers
         [Route("getDate")]
         public DateTime getDate()
         {
-            return DateTime.UtcNow;
+            //IFormatProvider culture = new System.Globalization.CultureInfo("fr-FR", true);
+            return DateTime.Now;
         }
     }
 }
