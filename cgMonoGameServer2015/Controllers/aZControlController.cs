@@ -11,10 +11,18 @@ namespace cgMonoGameServer2015.Controllers
     public class aZControlController : ApiController
     {
         [Route("getDate")]
-        public DateTime getDate()
+        public string getDate()
         {
-            //IFormatProvider culture = new System.Globalization.CultureInfo("fr-FR", true);
-            return DateTime.Now;
+            DateTime d = DateTime.UtcNow;
+            int day = d.Day;
+            int month = d.Month;
+            int year = d.Year;
+            int hour = d.Hour;
+            int minutes = d.Minute;
+            int second = d.Second;
+            string returnDate = "Date:" + day.ToString() + "-" + month.ToString() + "-" + year.ToString() + "Time:" + hour.ToString()
+                + "-" + minutes.ToString() + "-" + second.ToString();
+            return returnDate;
         }
     }
 }
