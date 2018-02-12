@@ -7,13 +7,13 @@ namespace cgMonoGameServer2015.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialGameModel : IMigrationMetadata
+    public sealed partial class initialmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialGameModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511020952551_Initial Game Model"; }
+            get { return "201802121353419_initial-migration"; }
         }
         
         string IMigrationMetadata.Source

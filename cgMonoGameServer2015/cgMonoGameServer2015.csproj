@@ -230,9 +230,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511020952551_Initial Game Model.cs" />
-    <Compile Include="Migrations\201511020952551_Initial Game Model.Designer.cs">
-      <DependentUpon>201511020952551_Initial Game Model.cs</DependentUpon>
+    <Compile Include="Migrations\201802121353419_initial-migration.cs" />
+    <Compile Include="Migrations\201802121353419_initial-migration.Designer.cs">
+      <DependentUpon>201802121353419_initial-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -325,8 +325,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511020952551_Initial Game Model.resx">
-      <DependentUpon>201511020952551_Initial Game Model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802121353419_initial-migration.resx">
+      <DependentUpon>201802121353419_initial-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
