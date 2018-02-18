@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace cgMonoGameServer2015.Controllers
 {
-    [Authorize]
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class ValuesController : ApiController
     {
         // GET api/values

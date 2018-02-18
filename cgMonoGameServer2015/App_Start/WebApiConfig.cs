@@ -19,6 +19,9 @@ namespace cgMonoGameServer2015
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            
+            // Enabling cors for call from Angular 4.3 client and others on different endpoints
+            config.EnableCors();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
