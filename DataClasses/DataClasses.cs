@@ -14,6 +14,43 @@ namespace DataClasses
     }
 
     [Serializable]
+    public class GameScoreObject
+    {
+        public string GameId { get; set; }
+
+        public string GameName { get; set; }
+
+        public string GamerTag { get; set; }
+
+        public int score { get; set; }
+
+    }
+
+    [Serializable]
+    public class PlayerScoreObject
+    {
+        public int GameId { get; set; }
+
+        public string PlayerId { get; set; }
+
+        public int score { get; set; }
+
+    }
+
+
+    [Serializable]
+    public class PlayerProfile
+    {
+        public string id;
+        public string GamerTag;
+        public string email;
+        public string userName;
+        public int XP;
+    }
+
+
+
+    [Serializable]
     public class PlayerDataObject : GameDataObject
     {
         public Vector2 position;

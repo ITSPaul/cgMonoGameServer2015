@@ -184,9 +184,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\DataClasses\DataClasses.cs">
-      <Link>DataClasses.cs</Link>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -276,8 +273,6 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="ApplicationInsights.config" />
     <Content Include="ClassDiagram1.cd" />
-    <None Include="Properties\PublishProfiles\cgMonoGameServer2015 - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\cgMonoGameServer2015 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -312,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -328,6 +324,12 @@
     <EmbeddedResource Include="Migrations\201802121353419_initial-migration.resx">
       <DependentUpon>201802121353419_initial-migration.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataClasses\DataClasses.csproj">
+      <Project>{7f669265-a6d5-474b-a54a-26e55155d8c6}</Project>
+      <Name>DataClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
