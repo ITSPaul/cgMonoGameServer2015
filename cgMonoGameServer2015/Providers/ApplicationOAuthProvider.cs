@@ -10,6 +10,8 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using cgMonoGameServer2015.Models;
+using Microsoft.Owin;
+using System.Configuration;
 
 namespace cgMonoGameServer2015.Providers
 {
@@ -25,6 +27,46 @@ namespace cgMonoGameServer2015.Providers
             }
 
             _publicClientId = publicClientId;
+        }
+
+        public override Task MatchEndpoint(OAuthMatchEndpointContext context)
+        {
+            {
+                SetCORSPolicy(context.OwinContext);
+                if (context.Request.Method == "OPTIONS")
+                {
+                    context.RequestCompleted();
+                    return Task.FromResult(0);
+                }
+
+                return base.MatchEndpoint(context);
+            }
+        }
+        private void SetCORSPolicy(IOwinContext context)
+            {
+            string allowedUrls = ConfigurationManager.AppSettings["allowedOrigins"];
+
+            if (!String.IsNullOrWhiteSpace(allowedUrls))
+            {
+                var list = allowedUrls.Split(',');
+                if (list.Length > 0)
+                {
+
+                    string origin = context.Request.Headers.Get("Origin");
+                    var found = list.Where(item => item == origin).Any();
+                    if (found)
+                    {
+                        context.Response.Headers.Add("Access-Control-Allow-Origin",
+                                                     new string[] { origin });
+                    }
+                }
+
+            }
+            context.Response.Headers.Add("Access-Control-Allow-Headers",
+                                   new string[] { "Authorization", "Content-Type" });
+            context.Response.Headers.Add("Access-Control-Allow-Methods",
+                                   new string[] { "OPTIONS", "POST" });
+
         }
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)

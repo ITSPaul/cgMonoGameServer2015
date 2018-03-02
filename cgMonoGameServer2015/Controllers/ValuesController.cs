@@ -4,7 +4,7 @@ using System.Web.Http.Cors;
 
 namespace cgMonoGameServer2015.Controllers
 {
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+    //[EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class ValuesController : ApiController
     {
         // GET api/values

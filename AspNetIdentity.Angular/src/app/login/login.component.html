@@ -1,0 +1,13 @@
+<div class="container">
+  <form class="form-signin" (ngSubmit)="login(userEmailInput.value, userPasswordInput.value)" #loginForm="ngForm">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <label for="inputEmail" class="sr-only">Username</label>
+    <input type="email" id="inputEmail" name="inputEmail" #userEmailInput ngModel class="form-control" placeholder="Username" required trim autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" name="inputPassword" #userPasswordInput ngModel class="form-control" placeholder="Password" required trim>
+
+    <button class="btn btn-primary btn-block" type="submit" [disabled]="!loginForm.form.valid">
+      Sign in
+    </button>
+  </form>
+</div>
