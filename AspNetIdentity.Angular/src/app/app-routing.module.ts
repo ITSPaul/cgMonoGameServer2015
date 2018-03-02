@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RestrictedComponent } from './restricted/restricted.component';
 import { IsLoggedInGuard } from './is-logged-in.guard';
-import { DateTestComponent } from './date-test/date-test.component';
+
 
 const routes: Routes = [
     {
@@ -17,11 +17,7 @@ const routes: Routes = [
       path: 'login',
       component: LoginComponent
     },
-    {
-      path: 'date',
-      component: DateTestComponent
-    },
-    {
+   {
       path: 'restricted',
       component: RestrictedComponent,
       canActivate: [

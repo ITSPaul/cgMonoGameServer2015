@@ -13,14 +13,13 @@ import { ValuesService } from './values.service';
 
 import { IsLoggedInGuard } from './is-logged-in.guard';
 import { AuthInterceptor } from './auth.interceptor';
-import { DateTestComponent } from './date-test/date-test.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     RestrictedComponent,
-    DateTestComponent
   ],
   imports: [
     BrowserModule,

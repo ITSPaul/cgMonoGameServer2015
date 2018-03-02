@@ -8,7 +8,6 @@
       <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn"> Home</a></li>
       <li><a routerLink="/login" routerLinkActive="active" class="btn">Login</a></li>
       <li *ngIf="isLoggedIn"><a routerLink="/restricted" routerLinkActive="active" class="btn">Restricted</a></li>
-      <li><a routerLink="/date" routerLinkActive="active" class="btn">Date test</a></li>
   </ul>
 
   <router-outlet></router-outlet>
