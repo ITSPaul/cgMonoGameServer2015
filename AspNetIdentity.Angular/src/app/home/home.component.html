@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h2>{{message}}</h2>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        isLoggedIn: <strong>{{ isLoggedIn }}</strong>
+        <div *ngIf="isLoggedIn">
+            <button (click)="logout()" class="btn btn-primary">Logout</button>
+        </div>
+    </div>
+</div>
